@@ -1,6 +1,5 @@
-# CE2101/CZ2101 ALGORITHM 
-# DESIGN AND ANALYSIS
-# Project 3: Dynamic Programming
+# CE2101/CZ2101 ALGORITHM DESIGN AND ANALYSIS
+## Project 3: Dynamic Programming
 We have a knapsack of capacity weight C (a positive integer) and n types of objects. Each object of the ith type has weight wi and profit pi (all wi and all pi are positive integers, i = 0, 1, …, n-1). There are unlimited supplies of each type of objects. Find the largest total profit of any set of the objects that fits in the knapsack.
 
 Let P(C) be the maximum profit that can be made by packing objects into the knapsack 
