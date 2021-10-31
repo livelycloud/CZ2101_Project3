@@ -23,7 +23,7 @@ int getMaxProfit(){
     curMax = new int[C+1];
 
     //initialize the array with the first element;
-    for(int j = 0;j <= C ; j++){
+    for(int j = 0; j <= C; j++){
         curMax[j] = 0;
     }
 
@@ -32,7 +32,8 @@ int getMaxProfit(){
         int w = weights[i];
         int p = profits[i];
 
-        for(int j = w; j <= C; j++){
+        
+        for(int j = C;j >= w; j--){
             curMax[j] = max(curMax[j - weights[i]] + profits[i], curMax[j]);
         }
         printArray();
