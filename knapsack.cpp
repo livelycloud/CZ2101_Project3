@@ -14,25 +14,27 @@ int* curMax;
 
 void printArray(){
     for(int i = 0; i <= C; i++){
-        printf("%d ", curMax[i]);
+        if(curMax[i] < 10){
+        printf(" %d ", curMax[i]);
+        }
+        else {
+            printf("%d ", curMax[i]);
+        }
     }
     printf("\n");
 }
 
 int getMaxProfit(){
     curMax = new int[C+1];
-
-    //initialize the array with the first element;
+    
+    //initialize the array with 0
     for(int j = 0;j <= C ; j++){
         curMax[j] = 0;
     }
 
     printArray();
    for(int i = 0; i < n; i++){
-        int w = weights[i];
-        int p = profits[i];
-
-        for(int j = w; j <= C; j++){
+        for(int j = weights[i]; j <= C; j++){
             curMax[j] = max(curMax[j - weights[i]] + profits[i], curMax[j]);
         }
         printArray();
